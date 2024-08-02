@@ -1,0 +1,19 @@
+management:
+  server:
+    port: 9191
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"
+    enabled-by-default: false
+    loggers:
+      enabled: true
+    restart:
+      enabled: true
+    refresh:
+      enabled: true
+    health:
+      enabled: true
+  security:
+    enabled: false
