@@ -1,4 +1,4 @@
-package practice;
+package org.example.practice;
 
 import org.example.exception.CannotConvertRomanToLongException;
 import org.example.practice.RomanConversion;

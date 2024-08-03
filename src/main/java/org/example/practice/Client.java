@@ -10,7 +10,8 @@ public class Client {
         System.out.println(FirstNonOccuringChar.getFirstNonOccuringChar("codeforcode"));
         RemoveEvenIntegersFromArray.reverseArray(new int[]{1,2,3,4,5});
         System.out.println();
-        Arrays.stream(RemoveEvenIntegersFromArray.removeEvenElementsFromArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8})).forEach(System.out::print);
+        Arrays.stream(RemoveEvenIntegersFromArray.removeEvenElementsFromArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8}))
+                .forEach(System.out::print);
 
 
     }
