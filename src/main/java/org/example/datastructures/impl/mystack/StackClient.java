@@ -1,4 +1,5 @@
-package org.example.datastructures.impl;
+package org.example.datastructures.impl.mystack;
+
 
 import org.example.utility.Utility;
 

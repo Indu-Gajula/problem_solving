@@ -1,4 +1,6 @@
-package org.example.datastructures.impl;
+package org.example.datastructures.impl.mylinkedlist;
+
+
 
 public class Client {
     public static void main(String[] args) {

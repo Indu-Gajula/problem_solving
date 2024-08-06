@@ -1,4 +1,4 @@
-package org.example.datastructures.impl;
+package org.example.datastructures.impl.mystack;
 
 public class MyArrayStack {
 

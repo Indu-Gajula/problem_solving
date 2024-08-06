@@ -1,4 +1,4 @@
-package org.example.datastructures.impl;
+package org.example.datastructures.impl.mylinkedlist;
 
 import java.util.Stack;
 
