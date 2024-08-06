@@ -1,4 +1,4 @@
-package org.example.datastructures.impl;
+package org.example.datastructures.impl.mystack;
 
 import java.util.*;
 
@@ -68,6 +68,9 @@ public class MyMonolithicStack {
         while(!stack.isEmpty()){
             ans[stack.pop()] = -1;
         }
+        int k = 90;
+       HashMap<Integer, Integer> hs = new HashMap<>();
+       hs.put(1,k);
 
         return ans;
 
