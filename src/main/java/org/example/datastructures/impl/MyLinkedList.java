@@ -106,6 +106,8 @@ public class MyLinkedList {
        }
     }
 
+
+
     public void deleteNodeAtPosition( int position){
 
        int pointer = 1;
