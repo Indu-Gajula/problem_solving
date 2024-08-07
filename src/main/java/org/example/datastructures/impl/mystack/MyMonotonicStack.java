@@ -2,7 +2,7 @@ package org.example.datastructures.impl.mystack;
 
 import java.util.*;
 
-public class MyMonolithicStack {
+public class MyMonotonicStack {
 
     // input - {3, 1, 4, 1, 5, 9, 2, 6} , output : 1 1 2 6
     public static int[] monotonicIncreasing(int[] nums) {
