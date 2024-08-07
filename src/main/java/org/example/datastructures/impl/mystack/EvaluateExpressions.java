@@ -4,20 +4,27 @@ import java.util.Stack;
 
 public class EvaluateExpressions {
 
-//    public String evaluatePreFixToInfix(String expression){
-//
-//        Stack<String> stack = new Stack<>();
-//
-//        for(char c : expression.toCharArray()){
-//
-//
-//        }
-//
-//
-//
-//    }
+    public static String evaluatePreFixToInfix(String expression){
 
-    boolean isOperator(char c){
+        Stack<String> stack = new Stack<>();
+        int len = expression.length();
+        for(int i = len-1; i >= 0 ; i-- ){
+            char c = expression.charAt(i);
+            if(!isOperator(c)){
+                stack.push(String.valueOf(c));
+            }else{
+                String opr1 = stack.pop();
+                String opr2 = stack.pop();
+                String temp = "(" + opr1 + c + opr2 + ")";
+                stack.push(temp);
+            }
+
+        }
+        return stack.pop();
+
+    }
+
+   static boolean isOperator(char c){
         switch(c){
             case '+' :
             case '-' :

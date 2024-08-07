@@ -23,12 +23,14 @@ public class StackClient {
         System.out.print("Elements present in stack :");
         ls.print();
 
-        int[] arr =  MyMonolithicStack.findNextGreatElement(new int[]{3,5,1,6,4,9});
-        int[] arr1 = MyMonolithicStack.findNextSmallerElement(new int[]{3,5,1,6,4,9});
+        int[] arr =  MyMonotonicStack.findNextGreatElement(new int[]{3,5,1,6,4,9});
+        int[] arr1 = MyMonotonicStack.findNextSmallerElement(new int[]{3,5,1,6,4,9});
         System.out.println("find the next smaller element to the current element");
         Utility.printArray(arr);
         System.out.println("find the next greater element to the current element");
         Utility.printArray(arr1);
+
+        System.out.println(EvaluateExpressions.evaluatePreFixToInfix("*+AB-CD"));
 
     }
 }

@@ -8,10 +8,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@ExtendWith(MockitoExtension.class)
+
 public class RomanConversionTest {
-
-
 
     @Test
     public void testConvertToLongTrue() throws Exception {
