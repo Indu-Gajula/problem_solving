@@ -6,7 +6,7 @@ public class SelectionSort {
 
 
     /*
-    * placing the minimum at bigining indexes, by holding the
+    * placing the minimum at beginning indexes, by holding the
     * minimum value's index in a variable and swapping when an array interation is completed
     */
     public static int[] sort(int[] nums){

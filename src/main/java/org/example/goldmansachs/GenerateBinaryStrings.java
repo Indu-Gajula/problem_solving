@@ -4,6 +4,7 @@ import java.util.stream.Stream;
 
 public class GenerateBinaryStrings {
 
+    // GenerateBinaryStrings.generateBinaryStringsInOrder(0,4, new int[4]);
     public static void generateBinaryStringsInOrder(int i, int n,int []arr){
         if(i==n){
             printArr(arr);

@@ -8,4 +8,11 @@ public interface Utility {
         }
          System.out.println();
     }
+    static String reverseString(String str){
+         String s = "";
+         for(char c : str.toCharArray()){
+             s = c+s;
+         }
+         return s;
+    }
 }

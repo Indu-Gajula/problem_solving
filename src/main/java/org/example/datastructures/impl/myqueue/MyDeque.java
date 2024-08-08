@@ -29,7 +29,7 @@ public class MyDeque {
     void insertFront(int data){
 
         Node newNode = new Node(data);
-        // do not know what this null check for
+
         if(front == null){
             front = rear = newNode;
         } else{
@@ -45,7 +45,7 @@ public class MyDeque {
     void insertRear(int data){
 
         Node newNode = new Node(data);
-        // do not know what this null check for
+
         if(rear == null){
             front = rear = newNode;
         } else{

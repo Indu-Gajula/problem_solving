@@ -1,5 +1,7 @@
 package org.example.practice;
 
+import org.example.utility.Utility;
+
 import java.util.Arrays;
 
 
@@ -12,7 +14,7 @@ public class Client {
         System.out.println();
         Arrays.stream(RemoveEvenIntegersFromArray.removeEvenElementsFromArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8}))
                 .forEach(System.out::print);
-
+        System.out.println(Utility.reverseString("idn"));
 
     }
 }
