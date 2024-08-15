@@ -1,4 +1,4 @@
-package org.example.goldmansachs;
+package org.example.leetcode.goldmansachs;
 //2154 - easy
 public class KeepMultiplaying {
 

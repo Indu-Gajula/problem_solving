@@ -1,4 +1,4 @@
-package org.example.goldmansachs;
+package org.example.leetcode.goldmansachs;
 
 //leetcode  -  1427
 // easy level

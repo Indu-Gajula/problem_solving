@@ -1,4 +1,4 @@
-package org.example.goldmansachs;
+package org.example.leetcode.goldmansachs;
 
 // 443 - medium // happy... i solved it in one go ...// can be modified later for modularity
 public class CompressString {

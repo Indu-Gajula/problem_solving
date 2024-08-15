@@ -1,4 +1,4 @@
-package org.example.goldmansachs;
+package org.example.leetcode.goldmansachs;
 
 //3168 - easy
 public class MiniMumChairs {

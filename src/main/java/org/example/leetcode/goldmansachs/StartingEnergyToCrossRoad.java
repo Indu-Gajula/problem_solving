@@ -1,4 +1,4 @@
-package org.example.goldmansachs;
+package org.example.leetcode.goldmansachs;
 
 public class StartingEnergyToCrossRoad {
 
