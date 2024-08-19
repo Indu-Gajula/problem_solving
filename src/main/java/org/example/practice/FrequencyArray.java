@@ -1,7 +1,8 @@
-package org.example.datastructures.algo;
+package org.example.practice;
 
 public class FrequencyArray {
 
+    //TODO
     public void findFrequencyOfEachElementInAnArray(int[] nums){
 
 
