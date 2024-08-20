@@ -34,7 +34,6 @@ public class FirstSmallestPositiveNumMIssing {
             int x = Math.abs(nums[i]);
             if(x<=len && nums[x-1] > 0)
                 nums[x-1] *= -1;
-
         }
         for(int i = 0 ; i< len; i++){
             if(nums[i]>0)
@@ -42,5 +41,13 @@ public class FirstSmallestPositiveNumMIssing {
         }
         return nums.length;
 
+    }
+
+
+
+
+    public static void main(String[] args) {
+        System.out.println(findSmallestPositiveNumMissingWithoutSet(new int[]{-1,2,3,1,6,7,4,-3}));
+        System.out.println(findSmallestPositiveNumMissing(new int[]{-1,2,3,1,6,7,4,-3}));
     }
 }

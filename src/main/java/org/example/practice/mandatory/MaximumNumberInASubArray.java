@@ -12,7 +12,7 @@ public class MaximumNumberInASubArray {
     // dequeue - 1,2,3,4,5, subraay size 3,
     // add in queue - 3 elements
     //1,5,3,2,4
-
+// TODO fix this
     public static int[] findMaxInSubArrs(int[] nums, int subArrSize){
 
         int n = nums.length;
@@ -41,8 +41,30 @@ public class MaximumNumberInASubArray {
         return result;
     }
 
+
+
+    public static int[] findMaxInSubArrs1(int[] nums, int subArrSize){
+
+        int n = nums.length;
+        int[] result = new int[n-subArrSize+1];
+
+        for(int i=0; i <= n-subArrSize;i++) {
+            int k = 0;
+            int max = Integer.MIN_VALUE;
+            while (k < subArrSize) {
+                max = Math.max(max, nums[i+k]);
+                k++;
+            }
+            result[i] = max;
+        }
+        return result;
+    }
+
+
+
+
     public static void main(String[] args) {
-        Utility.printArray(findMaxInSubArrs(new int[]{1,5,3,2,4},3));
+        Utility.printArray(findMaxInSubArrs1(new int[]{1,5,3,2,4},3));
     }
 
 }

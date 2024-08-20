@@ -15,6 +15,39 @@ public class MissingNumber {
         return sum;
     }
 
+    // works for starting from 0
+    public static int findMissingNumXOR(int[] nums){
+        int sum = 0 ;
+        for(int i=1;i<=nums.length; i++){
+            sum = sum^(i^nums[i-1]);
+        }
+        return sum;
+    }
+
+
+    // using // using XOR TODO - CHECK WHY NOT WRKING FOR STARTING FROM 1
+    // strting from  [0 N ] IS wrking if initializing nxor = 0, starting i from 1
+
+    public static int findMissingNumberUsingXOR(int[] nums){
+        // XOR of N numbers from 1 to n
+        int nXor = 1;
+        for(int i=2;i<=nums.length;i++){
+
+            nXor = nXor^i;
+//            System.out.println(i + " "+ nXor);
+        }
+        int nnXor = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            nnXor = nnXor^nums[i];
+//            System.out.println(nums[i] + " "+ nXor);
+        }
+        return nXor^nnXor;
+
+    }
+
+
+
+
     // sorting and comparing with index
     public static int find(int[] nums){
 
@@ -92,5 +125,8 @@ public class MissingNumber {
 
     public static void main(String[] args) {
         System.out.println(findUsingBinarySearchStartingFrom1(new int[]{1,2,6,5,3}));
+//        System.out.println(findMissingNumberUsingXOR(new int[]{1,2,6,5,3}));
+        System.out.println(findMissingNumXOR(new int[]{1,2,6,5,3,0}));
     }
+
 }

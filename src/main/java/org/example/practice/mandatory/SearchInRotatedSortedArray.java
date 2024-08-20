@@ -2,6 +2,7 @@ package org.example.practice.mandatory;
 
 public class SearchInRotatedSortedArray {
 
+
     public static int findElementInRotatedSortedArray(int[] nums, int target){
         int len =nums.length;
         int l = 0;
