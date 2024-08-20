@@ -5,7 +5,7 @@ package org.example.sorting;
 public class BubbleSort  {
     public static int[] sort(int[] nums){
 
-        // place the max element at the end bhy comparing adjucent elements,
+        // place the max element at the end by comparing adjucent elements,
         // at the end of array -> elements will be sorted need not to consider these
         // if there are no swaps happening in one cycle, that means array is already sorted
         //

@@ -3,7 +3,7 @@ package org.example.datastructures.impl.myqueue;
 // Deque using doubly linkedlist
 public class MyDeque {
 
-    int data;
+   // int data;
     Node front;
     Node rear;
 

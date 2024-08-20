@@ -17,4 +17,22 @@ public class FirstNonOccuringChar {
         }
         return -1;
     }
+
+    public static int getFirstNonOccuringChar1(String str){
+
+        int[] table = new int[123];
+        for (char c : str.toCharArray()) {
+            table[(int) c ]++;
+        }
+        for (int i=0; i< table.length;i++) {
+            if( table[str.charAt(i)] == 1)
+                return i;
+        }
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getFirstNonOccuringChar("gfgfgfk"));
+        System.out.println(getFirstNonOccuringChar1("gfggfgk"));
+    }
 }
