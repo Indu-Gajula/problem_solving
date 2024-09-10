@@ -16,4 +16,5 @@ public class StartingEnergyToCrossRoad {
                 return (-1*minimumEnergy) + 1;
         return 1;
     }
+
 }

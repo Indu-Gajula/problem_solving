@@ -5,7 +5,7 @@ public class MinimumFallingPathSum {
 
     public static int minFallingPathSum(int[][] matrix) {
         int n = matrix.length;
-        int min = Integer.MAX_VALUE;
+
 
         for(int i=1; i<n;i++){
             for(int j=0; j<n; j++){

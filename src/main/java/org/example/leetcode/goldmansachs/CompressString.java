@@ -1,5 +1,10 @@
 package org.example.leetcode.goldmansachs;
 
+import ch.qos.logback.core.model.INamedModel;
+
+import java.util.HashMap;
+import java.util.Map;
+
 // 443 - medium // happy... i solved it in one go ...// can be modified later for modularity
 public class CompressString {
     public static int compress(char[] chars) {
@@ -41,8 +46,28 @@ public class CompressString {
         return charsPosition;
     }
 
+    public static int getLengthOfCompressedString(String str){
+        HashMap<Character, Integer> map = new HashMap<>();
+        char[] chars = str.toCharArray();
+        for (char c : chars){
+            map.put(c,map.getOrDefault(c,0)+1);
+        }
+        int length = 0;
+        for(Map.Entry<Character,Integer> entry : map.entrySet()){
+            int num = entry.getValue();
+            int count = 0;
+            while(num != 0){
+                num = num/10;
+                count++;
+            }
+            length += count+1;
+        }
+        return length;
+    }
+
 
     public static void main(String[] args) {
         System.out.println(compress(new char[]{'a','a','b','b','c','c','c'}));
+        System.out.println(getLengthOfCompressedString("aabbbbbbbbbbbbbbbbbcccccccccccccccccc"));
     }
 }

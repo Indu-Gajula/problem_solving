@@ -1,4 +1,4 @@
-package org.example.practice;
+package org.example.practice.mandatory;
 
 import java.util.HashMap;
 import java.util.Map;

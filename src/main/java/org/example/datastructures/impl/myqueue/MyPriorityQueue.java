@@ -7,7 +7,7 @@ public class MyPriorityQueue {
    private  int[] arr;
 
     MyPriorityQueue(){
-        MAX = 20;
+        MAX = 5;
         arr = new int[MAX];
         noOfItems = 0;
     }
@@ -22,7 +22,7 @@ public class MyPriorityQueue {
         // 1 2 4 5
         if(noOfItems != MAX){
             int i;
-            for( i=noOfItems-1;i>0;i--){
+            for( i=noOfItems-1;i>=0;i--){
                 if(num < arr[i]){
                     arr[i+1] = arr[i];
                 }else{
@@ -64,5 +64,16 @@ public class MyPriorityQueue {
         System.out.println();
     }
 
+    public static void main(String[] args) {
+        MyPriorityQueue q = new MyPriorityQueue();
+        q.offer(4);
+        q.offer(2);
+        q.offer(5);
+        q.offer(1);
+        q.offer(3);
+        q.printQueue();
+        System.out.println(q.pop());
+
+    }
 
 }

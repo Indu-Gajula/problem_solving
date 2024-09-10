@@ -1,10 +1,8 @@
 package org.example.practice;
 
 import org.example.exception.CannotConvertRomanToLongException;
-import org.example.practice.RomanConversion;
+import org.example.practice.mandatory.RomanConversion;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
 

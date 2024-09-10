@@ -24,9 +24,6 @@ public class RemoveEvenIntegersFromArray {
         return nums;
     }
 
-
-
-
     public static void reverseArray(int[] arr){
         int l =0;
         int r = arr.length-1;
