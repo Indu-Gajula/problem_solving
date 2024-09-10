@@ -12,7 +12,7 @@ public class MissingNumber {
         for(int i=1;i<nums.length; i++){
             sum = sum + (i-nums[i-1]);
         }
-        return sum;
+        return Math.abs(sum);
     }
 
     // works for starting from 0
@@ -30,18 +30,18 @@ public class MissingNumber {
 
     public static int findMissingNumberUsingXOR(int[] nums){
         // XOR of N numbers from 1 to n
-        int nXor = 1;
-        for(int i=2;i<=nums.length;i++){
+        int nXor = 0;
+        for(int i=1;i<=nums.length;i++){
 
             nXor = nXor^i;
 //            System.out.println(i + " "+ nXor);
         }
-        int nnXor = nums[0];
-        for (int i = 1; i < nums.length; i++) {
-            nnXor = nnXor^nums[i];
+//        int nnXor = nums[0];
+        for (int i = 0; i < nums.length; i++) {
+            nXor = nXor^nums[i];
 //            System.out.println(nums[i] + " "+ nXor);
         }
-        return nXor^nnXor;
+        return nXor;
 
     }
 
@@ -124,9 +124,10 @@ public class MissingNumber {
 
 
     public static void main(String[] args) {
-        System.out.println(findUsingBinarySearchStartingFrom1(new int[]{1,2,6,5,3}));
-//        System.out.println(findMissingNumberUsingXOR(new int[]{1,2,6,5,3}));
-        System.out.println(findMissingNumXOR(new int[]{1,2,6,5,3,0}));
+//        System.out.println(findUsingBinarySearchStartingFrom1(new int[]{1,2,6,5,3}));
+        System.out.println(findMissingNumberUsingXOR(new int[]{1,2,6,5,3}));
+//        System.out.println(findMissingNumXOR(new int[]{1,2,6,5,3,0}));
+//        System.out.println(findMissingNum(new int[]{1,2,6,5,3}));
     }
 
 }

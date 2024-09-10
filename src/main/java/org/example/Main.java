@@ -81,7 +81,13 @@ public class Main {
     public static void main(String[] args) {
 //        SpringApplication.run(Main.class);
 
-        Main.findWinner(new int[]{1,2,3,4,5});
+
+            int x = 5;
+            x += x++ + ++x;
+            System.out.println(x);
+
+
+//        Main.findWinner(new int[]{1,2,3,4,5});
 
     }
 }

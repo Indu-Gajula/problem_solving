@@ -12,10 +12,10 @@ public class Questions {
 
     // 1. secondSmallest
     // 2. Maximum Avg String[][] == {{"Student1","150"},
-    //                              {"student2","100"},
-    //                              {"Student1","200"},
-    //                              {"Student2","50"},
-    //                              {"Student3","300"}}
+//                                  {"student2","100"},
+//                                  {"Student1","200"},
+//                                  {"Student2","50"},
+//                                  {"Student3","300"}}
 
 
 }

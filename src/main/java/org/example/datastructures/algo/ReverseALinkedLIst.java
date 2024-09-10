@@ -44,4 +44,23 @@ public class ReverseALinkedLIst {
 
         ReverseALinkedLIst.reverseALinkedList(n);
     }
+
+
+    public static Node reverse(Node head){
+
+        if(head.next == null){
+            return head;
+        }
+        Node prev = null;
+        Node curr = head;
+        while(curr != null){
+            Node temp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = temp;
+        }
+        head = prev;
+        return head;
+
+    }
 }
