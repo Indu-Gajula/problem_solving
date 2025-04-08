@@ -30,19 +30,16 @@ public class HighFive {
         }
         int[][] result = new int[scoresMap.size()][2];
         int count = 0;
-        for (Map.Entry<Integer, PriorityQueue<Integer>> scores : scoresMap.entrySet()) {
-            PriorityQueue<Integer> score = scores.getValue();
-            int key = scores.getKey();
-            int total =0;
-            for (int i=0; i<5; i++){
-                total += (int) score.poll();
+        for(int key : scoresMap.keySet()){
+            PriorityQueue<Integer> score = scoresMap.get(key);
+            int sum = 0;
+            for (int i = 0; i<5; i++){
+                sum+= (int) score.poll();
             }
-            total /=5;
-           result[count] = new int[]{key, total};
-           count++;
+            sum/=5;
+            result[count] = new int[]{key, sum};
+            count++;
         }
         return result;
-
-
     }
 }

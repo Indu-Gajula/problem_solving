@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @SpringBootApplication
 @MyAnnotation
 @RequestMapping("/app")
@@ -82,12 +85,29 @@ public class Main {
 //        SpringApplication.run(Main.class);
 
 
-            int x = 5;
-            x += x++ + ++x;
-            System.out.println(x);
-
-
+//            int x = 5;
+//            x += x++ + ++x;
+//            System.out.println(x);
+//            NumberValid.method(2);
 //        Main.findWinner(new int[]{1,2,3,4,5});
+        System.out.println(digitCount("1210"));;
 
     }
+
+
+        public static boolean digitCount(String num) {
+            int length = num.length();
+            int[] actual = new int[10];
+            for(char c : num.toCharArray()){
+                actual[(int) c - '0'] += 1;
+            }
+            for(int i=0; i<length; i++){
+                if(actual[i] != (int) num.charAt(i)){
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
 }

@@ -54,4 +54,35 @@ public class TrappingRainWater {
 
         return total;
     }
+
+
+    public static int trappedWater(int n[]){
+        int len =  n.length;
+        int []lMaxArr = new int[len];
+        int []rMaxArr = new int[len];
+        int lMax = n[0];
+        int rMax = n[len-1];
+        int result = 0;
+        for(int i=0; i<len; i++){
+            if(lMax<n[i]){
+                lMax = n[i];
+            }
+            lMaxArr[i] = lMax;
+        }
+        for(int i=len-1; i>=0; i--){
+            if(rMax<n[i]){
+                rMax = n[i];
+            }
+            rMaxArr[i] = rMax;
+        }
+        for(int i=0; i<len; i++){
+            result += ( Math.min(lMaxArr[i],rMaxArr[i]) - n[i]);
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getUnitsOfWaterStored(new int[]{1,2,1,3,2,3}));
+        System.out.println(getAmountOfWaterStored(new int[]{1,2,1,3,2,3}));
+    }
 }

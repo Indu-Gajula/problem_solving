@@ -72,10 +72,27 @@ public class RemoveDuplicatesFromArray {
 
     }
 
+    private static int[] removeduplicatesFromArr(int[] arr){
+        int end = arr.length;
+        for (int i=0; i<end; i++){
+            for(int j=i+1; j<end; j++){
+                if(arr[i] == arr[j]){
+                    arr[j] = arr[end-1];
+                    end--;
+                    j--;
+                }
+            }
+        }
+        int[] newArr = new int[end];
+        System.arraycopy(arr,0,newArr,0, end);
+        return newArr;
+    }
+
     public static void main(String[] args) {
         Utility.printArray(giveOnlyNonDuplicateElements(new int[]{1,2,1,2,2,3,4,5,6,7}));
         Utility.printArray(removeDuplicateElements(new int[]{1,2,1,2,2,3,4,5,6,7}));
         Utility.printArray(removeDuplicateElementsWithNewArray(new int[]{1,2,1,2,2,3,4,5,6,7}));
+        Utility.printArray(removeduplicatesFromArr(new int[]{1,2,1,2,2,3,4,5,6,7}));
     }
 
 

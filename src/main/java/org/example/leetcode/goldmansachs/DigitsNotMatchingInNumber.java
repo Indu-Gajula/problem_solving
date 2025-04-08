@@ -15,7 +15,6 @@ public class DigitsNotMatchingInNumber {
             if(!isMatching(i*q,i)){
                 list.add(l);
             }
-
         }
 
         return list;

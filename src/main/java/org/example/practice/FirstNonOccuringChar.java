@@ -2,6 +2,7 @@ package org.example.practice;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 
 public class FirstNonOccuringChar {
 
@@ -32,7 +33,10 @@ public class FirstNonOccuringChar {
     }
 
     public static void main(String[] args) {
-        System.out.println(getFirstNonOccuringChar("gfgfgfk"));
-        System.out.println(getFirstNonOccuringChar1("gfggfgk"));
+//        System.out.println(getFirstNonOccuringChar("gfgfgfk"));
+//        System.out.println(getFirstNonOccuringChar1("gfggfgk"));
+        HashMap<String, String> map = new HashMap<>();
+        map.put("se","c");
+        map.put("we","cer");
     }
 }

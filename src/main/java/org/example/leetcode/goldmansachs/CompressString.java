@@ -60,7 +60,29 @@ public class CompressString {
                 num = num/10;
                 count++;
             }
-            length += count+1;
+            length += count+1; // one extra to consider the length of the key also a10 --> 3 not 2
+        }
+        return length;
+    }
+
+    public static int getLengthOfCompressedStringUsingHash(String str){
+        int []hash = new int[26];
+        char[] chars = str.toCharArray();
+        for (char c : chars){
+            hash[c-'a'] += 1;
+        }
+        int length = 0;
+        for(int i=0; i<26; i++){
+            int num = hash[i];
+            if(num == 0){
+                continue;
+            }
+            int count = 0;
+            while(num != 0){
+                num = num/10;
+                count++;
+            }
+            length += count+1; // one extra to consider the length of the key also a10 --> 3 not 2
         }
         return length;
     }
@@ -69,5 +91,6 @@ public class CompressString {
     public static void main(String[] args) {
         System.out.println(compress(new char[]{'a','a','b','b','c','c','c'}));
         System.out.println(getLengthOfCompressedString("aabbbbbbbbbbbbbbbbbcccccccccccccccccc"));
+        System.out.println(getLengthOfCompressedStringUsingHash("aabbbbbbbbbbbbbbbbbcccccccccccccccccc"));
     }
 }
