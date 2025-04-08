@@ -2,6 +2,7 @@ package org.example.practice.mandatory;
 
 import com.fasterxml.jackson.core.io.CharTypes;
 import org.example.Main;
+import org.example.utility.Utility;
 
 import java.util.HashMap;
 
@@ -31,16 +32,21 @@ public class NonRepeatingCharInSubArray {
     // brut force
     public static int findMaxLengthOfNonRepSubString(String str){
         int maxLen = 0;
+
+        HashMap<Integer, int[]>  map = new HashMap<>();
         for(int i =0 ; i < str.length(); i++){
             StringBuilder sb = new StringBuilder();
             for (int j =i; j<str.length(); j++){
                 if(sb.indexOf(String.valueOf(str.charAt(j))) != -1){
+                    int[] indices = new int[]{i,j-1};
+                    map.put(sb.length(),indices);
                     break;
                 }
                 sb.append(str.charAt(j));
                 maxLen = Math.max(maxLen,sb.length());
             }
         }
+        Utility.printArray( map.get(maxLen));
         return maxLen;
     }
 
@@ -73,6 +79,10 @@ public class NonRepeatingCharInSubArray {
 
         }
         return maxLen;
+    }
+
+    public static void main(String[] args) {
+        findMaxLengthOfNonRepSubString("aabcbc");
     }
 
 }

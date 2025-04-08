@@ -43,6 +43,8 @@ public class ReverseALinkedLIst {
         n.next.next.next = new Node(4);
 
         ReverseALinkedLIst.reverseALinkedList(n);
+
+//        ReverseALinkedLIst.rev(n);
     }
 
 
@@ -63,4 +65,6 @@ public class ReverseALinkedLIst {
         return head;
 
     }
+
+
 }

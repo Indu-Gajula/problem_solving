@@ -2,8 +2,7 @@ package org.example.leetcode.goldmansachs;
 
 import org.example.utility.Utility;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 //
 public class LongSubStringWIthoutRepeatingChar {
@@ -38,6 +37,7 @@ public class LongSubStringWIthoutRepeatingChar {
             maxLength = Math.max(maxLength, index-start+1);
             LastIndex[charNow] = index+1;
         }
+
         return maxLength;
 
     }
@@ -82,13 +82,49 @@ public class LongSubStringWIthoutRepeatingChar {
         return maxLen;
     }
 
-    public static void main(String[] args) {
-        System.out.println(lengthOfLongestSubstring("abcakbcbb"));
-        System.out.println(lengthOfLongestSubstring1("abcakbcbb"));
-        Utility.printArray(indicesOfLongestSubstring("abcakbcbb"));
+
+    public static int[] topKFrequent(int[] nums, int k) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int key = nums[i];
+            if (!map.containsKey(key)) {
+                map.put(key, 1);
+            } else {
+                map.put(key, map.get(key) + 1);
+            }
+        }
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        for (Integer value : map.values()) {
+            pq.add(value);
+            if (pq.size() > k) {
+                pq.remove();
+            }
+        }
+        int[] result = new int[k];
+        int i = 0;
+        while (pq.size() != 0) {
+            int freq = pq.poll();
+            for (Integer key : map.keySet()) {
+                if (map.get(key) == freq) {
+                    result[i] = key;
+                    i++;
+                }
+            }
+        }
+        return result;
     }
 
 
+    public static void main(String[] args) {
+//        System.out.println(lengthOfLongestSubstring("abcakbcbb"));
+//        System.out.println(lengthOfLongestSubstring1("abcakbcbb"));
+//        Utility.printArray(indicesOfLongestSubstring("abcakbcbb"));
 
+        int []arr = topKFrequent(new int[]{1,1,1,2,2,3}, 2);
+        Utility.printArray(arr);
+
+
+
+    }
 
 }
